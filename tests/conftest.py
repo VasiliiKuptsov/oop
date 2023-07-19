@@ -3,7 +3,7 @@ import pytest
 
 @pytest.fixture
 def valid_data():
-    return[
+    return [
   {
     "id": 441945886,
     "state": "EXECUTED",
@@ -151,7 +151,7 @@ def valid_data():
     },
     "description": "Открытие вклада",
     "to": "Счет 72082042523231456215"
-  }, {}]
+  }]
 
 @pytest.fixture
 def i_data():
