@@ -5,6 +5,10 @@ from arc.settings import DATA_PATH
 
 def test_get_sorting_five(valid_data):
     assert len(get_sorting_five(valid_data)) == 5
+    assert get_sorting_five(valid_data)[0] == {'id': 441945886, 'state': 'EXECUTED', 'date':
+    '2019-08-26T10:50:58.294041', 'operationAmount': {'amount': '31957.58',
+    'currency': {'name': 'руб.', 'code': 'RUB'}}, 'description': 'Перевод организации', 'from':
+    'Maestro 1596837868705199', 'to': 'Счет 64686473678894779589'}
 
 
 def test_get_data():
@@ -14,6 +18,12 @@ def test_get_data():
 def test_get_card_date(valid_data):
     assert len(get_card_date(valid_data)) == 9
     assert isinstance(get_card_date(valid_data), list)
+    assert get_card_date(valid_data)[0]['state'] == 'EXECUTED'
+    assert get_card_date(valid_data)[0] == {'id': 441945886, 'state': 'EXECUTED', 'date':
+    '2019-08-26T10:50:58.294041',
+    'operationAmount': {'amount': '31957.58', 'currency': {'name': 'руб.',
+    'code': 'RUB'}}, 'description': 'Перевод организации', 'from': 'Maestro 1596837868705199',
+    'to': 'Счет 64686473678894779589'}
 
 
 def test_get_date_rus():
