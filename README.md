@@ -1,2 +1,4 @@
 CARDS
-Код статистики и выделения посдних операций. Запуск кода происходит с файла main.py. 
+Running 'main.ru'.
+The code sorts and issues the last 5 customer cards by date.
+
